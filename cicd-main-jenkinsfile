@@ -34,7 +34,7 @@ steps
  ansiblePlaybook credentialsId: 'client-ssh-creds', installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: '/var/lib/jenkins/workspace/cicd-main/deploy-cicd-main.yml'
 }
 }
-stage('remove newly created image')
+stage('remove newly created image from jenkins server')
 {
 steps
 {
