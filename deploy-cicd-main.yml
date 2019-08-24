@@ -9,7 +9,7 @@
 	 
    - name: bring down docker-compose if already exists
      raw:  docker-compose -f /tmp/cicd-main-compose.yml down
-	 ignore_errors: true
+     ignore_errors: true
 	 
    - name: bring up docker-compose file for bringing up application
      raw: docker-compose -f /tmp/cicd-main-compose.yml up -d
