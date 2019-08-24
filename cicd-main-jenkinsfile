@@ -10,7 +10,7 @@ steps
 git branch: 'master', url: 'https://github.com/sreedevops26/cicd-main.git'
 }
 }
-stage('build docker image')
+stage('build docker image using dockerfile')
 {
 steps
 {
