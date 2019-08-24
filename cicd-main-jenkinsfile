@@ -17,5 +17,15 @@ steps
 sh 'docker build -t  sreedevops26/mydevops:2019.3 .'
 }
 }
+stage('push docker image into registry')
+{
+steps
+{
+withDockerRegistry(credentialsId: 'regcred', url: 'https://index.docker.io/v1/') 
+{
+    sh 'docker push sreedevops26/mydevops:2019.3'
+}
+}
+}
 }
 }
