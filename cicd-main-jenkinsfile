@@ -1,0 +1,21 @@
+pipeline 
+{
+agent any
+stages
+{  
+stage('pull code from scm')
+{
+steps
+{
+git branch: 'master', url: 'https://github.com/sreedevops26/cicd-main.git'
+}
+}
+stage('build docker image')
+{
+steps
+{
+sh 'docker build -t  sreedevops26/mydevops:2019.3 .'
+}
+}
+}
+}
