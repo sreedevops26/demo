@@ -1,0 +1,15 @@
+---
+ - hosts: prod-server
+   tasks:
+   - name: copy compose file into target system
+     copy: src=cicd-main-compose.yml dest=/tmp
+     
+   - name: pull docker image from registry
+     raw: docker pull sreedevops26/mydevops:2019.3
+	 
+   - name: bring down docker-compose if already exists
+     raw:  docker-compose -f /tmp/cicd-main-compose.yml down
+	 ignore_errors: true
+	 
+   - name: bring up docker-compose file for bringing up application
+     raw: docker-compose -f /tmp/cicd-main-compose.yml up -d
