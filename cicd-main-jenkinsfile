@@ -27,7 +27,7 @@ withDockerRegistry(credentialsId: 'regcred', url: 'https://index.docker.io/v1/')
 }
 }
 }
-/*stage('run ansible playbook to pull docker image and bringup containers')
+stage('run ansible playbook to pull docker image and bringup containers')
 {
 steps
 {
@@ -40,6 +40,6 @@ steps
 {
 sh "docker rmi -f sreedevops26/mydevops:2019.3"
 }
-}*/
+}
 }
 }
