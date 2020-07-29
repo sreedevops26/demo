@@ -17,7 +17,7 @@ steps
 sh 'docker build -t  sreedevops26/mydevops:2019.3 .'
 }
 }
-/*stage('push docker image into registry')
+stage('push docker image into registry')
 {
 steps
 {
@@ -27,7 +27,7 @@ withDockerRegistry(credentialsId: 'regcred', url: 'https://index.docker.io/v1/')
 }
 }
 }
-stage('run ansible playbook to pull docker image and bringup containers')
+/*stage('run ansible playbook to pull docker image and bringup containers')
 {
 steps
 {
