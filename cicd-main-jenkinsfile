@@ -10,14 +10,14 @@ steps
 git branch: 'master', url: 'https://github.com/sreedevops26/demo.git'
 }
 }
-/*stage('build docker image using Dockerfile')
+stage('build docker image using Dockerfile')
 {
 steps
 {
 sh 'docker build -t  sreedevops26/mydevops:2019.3 .'
 }
 }
-stage('push docker image into registry')
+/*stage('push docker image into registry')
 {
 steps
 {
