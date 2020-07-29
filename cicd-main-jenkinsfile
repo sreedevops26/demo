@@ -7,10 +7,10 @@ stage('checkout scm')
 {
 steps
 {
-git branch: 'master', url: 'https://github.com/sreedevops26/cicd-main.git'
+git branch: 'master', url: 'https://github.com/sreedevops26/demo.git'
 }
 }
-stage('build docker image using Dockerfile')
+/*stage('build docker image using Dockerfile')
 {
 steps
 {
@@ -41,5 +41,5 @@ steps
 sh "docker rmi -f sreedevops26/mydevops:2019.3"
 }
 }
-}
+}*/
 }
