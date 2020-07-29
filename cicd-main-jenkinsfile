@@ -40,6 +40,6 @@ steps
 {
 sh "docker rmi -f sreedevops26/mydevops:2019.3"
 }
-}
 }*/
+}
 }
