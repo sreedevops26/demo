@@ -14,8 +14,6 @@ stage('build docker image using Dockerfile')
 {
 steps
 {
-sh 'chmod +x docker-permissions.sh'
-sh 'sh docker-permissions.sh'
 sh 'docker build -t  sreedevops26/mydevops:2019.3 .'
 }
 }
